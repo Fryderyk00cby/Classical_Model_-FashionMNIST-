@@ -117,14 +117,4 @@ ViT模型在CIFAR-10数据集上实现了Vision Transformer架构，将图像分
 - ResNet: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 - ViT: [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929)
 
-## 📄 许可证
 
-MIT License
-
-## 👤 作者
-
-Fryderyk00cby
-
-## 💬 贡献
-
-欢迎提交Issue和Pull Request！
