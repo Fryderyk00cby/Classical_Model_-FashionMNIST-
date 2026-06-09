@@ -77,15 +77,13 @@ python test.py --model [model_name] --dataset [dataset_name]
 
 ## 📊 模型性能
 
-| 模型 | 数据集 | 准确率 | 参数量 |
-|------|--------|--------|--------|
-| LeNet | FashionMNIST | - | ~60K |
-| AlexNet | FashionMNIST | - | ~60M |
-| GoogLeNet | FashionMNIST | - | ~6.6M |
-| ResNet | FashionMNIST | - | ~25M |
-| ViT | CIFAR-10 | - | ~86M |
-
-*注：性能数据需要根据实际训练结果填写*
+| 模型 | 数据集 | 参数量 |
+|------|--------|--------|
+| LeNet | FashionMNIST | ~60K |
+| AlexNet | FashionMNIST | ~60M |
+| GoogLeNet | FashionMNIST | ~6.6M |
+| ResNet | FashionMNIST | ~25M |
+| ViT | CIFAR-10 | ~86M |
 
 ## 🔧 依赖库
 
@@ -130,4 +128,3 @@ Fryderyk00cby
 ## 💬 贡献
 
 欢迎提交Issue和Pull Request！
-
