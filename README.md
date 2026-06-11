@@ -1,91 +1,91 @@
 # Classical_Model_-FashionMNIST-
 
-用LeNet、AlexNet、GoogLeNet和ResNet进行FashionMNIST分类任务，同时包含ViT在CIFAR-10上的分类实现。
+Implementation of LeNet, AlexNet, GoogLeNet, and ResNet for FashionMNIST classification tasks, along with Vision Transformer (ViT) implementation on CIFAR-10.
 
-## 📋 项目概述
+## 📋 Project Overview
 
-本项目实现了多种经典卷积神经网络架构，用于服装图像分类任务。主要包括：
+This project implements multiple classical convolutional neural network architectures for clothing image classification. Main components include:
 
-- **LeNet**：经典的卷积神经网络，适合小尺寸图像
-- **AlexNet**：深度学习的标志性模型，引入ReLU激活函数
-- **GoogLeNet**：引入Inception模块的网络结构
-- **ResNet**：残差网络，支持更深层的网络训练
-- **ViT**：Vision Transformer，在CIFAR-10数据集上的实现
+- **LeNet**: Classic convolutional neural network, suitable for small-sized images
+- **AlexNet**: Landmark deep learning model, introducing ReLU activation functions
+- **GoogLeNet**: Network architecture introducing Inception modules
+- **ResNet**: Residual network, supporting deeper network training
+- **ViT**: Vision Transformer, implemented on CIFAR-10 dataset
 
-## 🎯 数据集
+## 🎯 Datasets
 
-- **FashionMNIST**：用于LeNet、AlexNet、GoogLeNet和ResNet
-  - 60,000张训练图像
-  - 10,000张测试图像
-  - 10个服装类别
-  - 图像大小：28×28像素
+- **FashionMNIST**: Used for LeNet, AlexNet, GoogLeNet, and ResNet
+  - 60,000 training images
+  - 10,000 test images
+  - 10 clothing categories
+  - Image size: 28×28 pixels
 
-- **CIFAR-10**：用于ViT模型
-  - 50,000张训练图像
-  - 10,000张测试图像
-  - 10个物体类别
-  - 图像大小：32×32像素
+- **CIFAR-10**: Used for ViT model
+  - 50,000 training images
+  - 10,000 test images
+  - 10 object categories
+  - Image size: 32×32 pixels
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 Classical_Model_-FashionMNIST-/
-├── README.md                 # 项目说明文档
-├── models/                   # 模型实现
+├── README.md                 # Project documentation
+├── models/                   # Model implementations
 │   ├── lenet.py
 │   ├── alexnet.py
 │   ├── googlenet.py
 │   ├── resnet.py
 │   └── vit.py
-├── data/                     # 数据处理脚本
+├── data/                     # Data processing scripts
 │   └── data_loader.py
-├── train.py                  # 训练脚本
-├── test.py                   # 测试脚本
-└── requirements.txt          # 依赖库
+├── train.py                  # Training script
+├── test.py                   # Testing script
+└── requirements.txt          # Dependencies
 ```
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. 配置数据集路径
+### 2. Configure Dataset Path
 
-在运行脚本前，请修改代码中的数据集路径，确保指向正确的数据集目录。
+Before running the scripts, please modify the dataset path in the code to ensure it points to the correct dataset directory.
 
-### 3. 训练模型
+### 3. Train Models
 
 ```bash
-# 训练FashionMNIST模型（选择一个）
+# Train FashionMNIST models (choose one)
 python train.py --model lenet --dataset fashionmnist
 python train.py --model alexnet --dataset fashionmnist
 python train.py --model googlenet --dataset fashionmnist
 python train.py --model resnet --dataset fashionmnist
 
-# 训练ViT模型（CIFAR-10）
+# Train ViT model (CIFAR-10)
 python train.py --model vit --dataset cifar10
 ```
 
-### 4. 测试模型
+### 4. Test Models
 
 ```bash
 python test.py --model [model_name] --dataset [dataset_name]
 ```
 
-## 📊 模型性能
+## 📊 Model Performance
 
-| 模型 | 数据集 | 参数量 |
-|------|--------|--------|
+| Model | Dataset | Parameters |
+|-------|---------|-----------|
 | LeNet | FashionMNIST | ~60K |
 | AlexNet | FashionMNIST | ~60M |
 | GoogLeNet | FashionMNIST | ~6.6M |
 | ResNet | FashionMNIST | ~25M |
 | ViT | CIFAR-10 | ~86M |
 
-## 🔧 依赖库
+## 🔧 Dependencies
 
 - PyTorch >= 1.9
 - torchvision >= 0.10
@@ -93,28 +93,26 @@ python test.py --model [model_name] --dataset [dataset_name]
 - matplotlib
 - tqdm
 
-## 📝 详细说明
+## 📝 Detailed Description
 
-### FashionMNIST分类
+### FashionMNIST Classification
 
-各个模型都可以直接用于FashionMNIST分类任务。FashionMNIST是MNIST的升级版本，包含10种不同的服装类别。
+All models can be directly used for FashionMNIST classification tasks. FashionMNIST is an upgraded version of MNIST, containing 10 different clothing categories.
 
-### CIFAR-10分类
+### CIFAR-10 Classification
 
-ViT模型在CIFAR-10数据集上实现了Vision Transformer架构，将图像分割成Patch进行处理。
+The ViT model implements Vision Transformer architecture on CIFAR-10 dataset, processing images by splitting them into patches.
 
-## ⚠️ 重要提示
+## ⚠️ Important Notes
 
-- **修改数据集路径**：在运行脚本前，必须根据本地环境修改数据集的路径配置
-- **GPU支持**：建议使用GPU加速训练，可提高训练速度
-- **内存需求**：部分模型（如ResNet、ViT）需要较多内存，请确保系统配置充足
+- **Dataset Path Configuration**: Before running scripts, you must modify the dataset path configuration according to your local environment
+- **GPU Support**: GPU acceleration is recommended for faster training
+- **Memory Requirements**: Some models (such as ResNet and ViT) require significant memory. Please ensure your system has sufficient resources
 
-## 📖 参考文献
+## 📖 References
 
 - LeNet: [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)
 - AlexNet: [ImageNet Classification with Deep CNNs](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
 - GoogLeNet: [Going Deeper with Convolutions](https://arxiv.org/abs/1409.4842)
 - ResNet: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 - ViT: [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929)
-
-
