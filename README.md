@@ -26,23 +26,6 @@ This project implements multiple classical convolutional neural network architec
   - 10 object categories
   - Image size: 32×32 pixels
 
-## 📁 Project Structure
-
-```
-Classical_Model_-FashionMNIST-/
-├── README.md                 # Project documentation
-├── models/                   # Model implementations
-│   ├── lenet.py
-│   ├── alexnet.py
-│   ├── googlenet.py
-│   ├── resnet.py
-│   └── vit.py
-├── data/                     # Data processing scripts
-│   └── data_loader.py
-├── train.py                  # Training script
-├── test.py                   # Testing script
-└── requirements.txt          # Dependencies
-```
 
 ## 🚀 Quick Start
 
@@ -56,24 +39,6 @@ pip install -r requirements.txt
 
 Before running the scripts, please modify the dataset path in the code to ensure it points to the correct dataset directory.
 
-### 3. Train Models
-
-```bash
-# Train FashionMNIST models (choose one)
-python train.py --model lenet --dataset fashionmnist
-python train.py --model alexnet --dataset fashionmnist
-python train.py --model googlenet --dataset fashionmnist
-python train.py --model resnet --dataset fashionmnist
-
-# Train ViT model (CIFAR-10)
-python train.py --model vit --dataset cifar10
-```
-
-### 4. Test Models
-
-```bash
-python test.py --model [model_name] --dataset [dataset_name]
-```
 
 ## 📊 Model Performance
 
@@ -93,21 +58,6 @@ python test.py --model [model_name] --dataset [dataset_name]
 - matplotlib
 - tqdm
 
-## 📝 Detailed Description
-
-### FashionMNIST Classification
-
-All models can be directly used for FashionMNIST classification tasks. FashionMNIST is an upgraded version of MNIST, containing 10 different clothing categories.
-
-### CIFAR-10 Classification
-
-The ViT model implements Vision Transformer architecture on CIFAR-10 dataset, processing images by splitting them into patches.
-
-## ⚠️ Important Notes
-
-- **Dataset Path Configuration**: Before running scripts, you must modify the dataset path configuration according to your local environment
-- **GPU Support**: GPU acceleration is recommended for faster training
-- **Memory Requirements**: Some models (such as ResNet and ViT) require significant memory. Please ensure your system has sufficient resources
 
 ## 📖 References
 
